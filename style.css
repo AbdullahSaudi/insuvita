@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/** Basic section **/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h3{                                  /*extra*/
+    font-size: 30px;
+    line-height: 54px;
+    color: #222;
+} 
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h5{
+    font-size: 18px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+span{
+    font-size: .9rem;
+    color: #757373;
+}
+
+p{
+    font-size: 16px;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none; /******/
+    transition: 0.5s;
+}
+
+button.trans {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none; /******/
+    transition: 0.2s;
+}
+
+body{
+    width: 100%;
+    background-color: #071423;
+}
+
+/** The Home Page **/
+/* navbar */
+
+#header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    width: 100%;
+    background-color: #071423;
+    padding: 0.1vw 8vw;  /*What's the vw*/
+    box-shadow: 6px 6px 10px #0c1d2f;
+}
+
+#header .logo{
+    width: 170px;
+    cursor: pointer;
+}
+
+#header div{
+    display: flex;
+    
+}
+
+#header div ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  /*why we use it*/
+}
+
+#header div ul li{
+    list-style: none;
+    margin-left: 30px;
+    position: relative;
+}
+
+#header div ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+
+#header div .log{
+    color: #616161;
+    font-weight: 500;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 0.5s;
+    padding:20px 0 20px 15px;
+}
+
+#header div .log:hover{
+    color:rgba(241,131,19,255);
+}
+
+#header div ul li a:hover{
+    color: #21d4fd;
+}
+
+#header div button{
+    border-radius: 4px;
+    border: 0.3px solid black;
+    cursor: pointer;
+    background: none;
+    margin-left: 50px;
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+
+#header div ul button:hover{
+    color: #fff;
+    background-color: rgb(21, 21, 100);
+}
+
+#header li a:hover,
+#header li a.active{
+    color: #21d4fd;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 60%;
+    height: 2px;
+    background: #21d4fd;
+    position: absolute;
+    bottom: -4px;
+    left: 2px;
+}
+
+#header #bar{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#header #bar-close{
+    display: none;
+}
+
+
+/*Time Line*/
+.step-wizard {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.step-wizard-list{
+    background: rgb(248, 245, 245);
+    box-shadow: 15px 15px 25px rgba(0,0,0,0.1);
+    color: #333;
+    list-style-type: none;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.step-wizard-item{
+    padding: 0 20px;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive:1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 450px;
+    position: relative;
+}
+.step-wizard-item + .step-wizard-item:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 19px;
+    background: #21d4fd;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-50%);
+    z-index: -10;
+}
+.progress-count{
+    height: 40px;
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    margin: 0 auto;
+    position: relative;
+    z-index:10;
+    color: transparent;
+}
+.progress-count:after{
+    content: "";
+    height: 40px;
+    width: 40px;
+    background: #21d4fd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -10;
+}
+.progress-count:before{
+    content: "";
+    height: 10px;
+    width: 20px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    transform-origin: center center;
+}
+.progress-label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.current-item .progress-count:before,
+.current-item ~ .step-wizard-item .progress-count:before{
+    display: none;
+}
+.current-item ~ .step-wizard-item .progress-count:after{
+    height:10px;
+    width:10px;
+}
+.current-item ~ .step-wizard-item .progress-label{
+    opacity: 0.5;
+}
+.current-item .progress-count:after{
+    background: #fff;
+    border: 2px solid #21d4fd;
+}
+.current-item .progress-count{
+    color: #21d4fd;
+}
+
+/*Info Section*/
+.info {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Upcoming Events*/
+.upcoming{
+    width: 400px;
+    text-align: center;
+    background: #fcfcfc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 15px 15px 25px rgba(0,0,0,0.1);
+}
+
+.upcoming p{
+    padding: 0;
+    margin: 5px 0px;
+}
+
+.upcoming hr{
+    margin: 10px 0px;
+    color: #fff;
+}
+
+.upcoming .orange{
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 0.8rem;
+    padding: 13px 35px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.upcoming .btn{
+    margin-top: 30px;
+}
+
+.upcoming .orange{
+    color: #fff;
+    background-color: rgba(241,131,19,255);
+    transition: 0.3s ease;
+}
+
+.upcoming .orange:hover{
+    color: #fff;
+    background-color: rgb(43, 43, 161);
+}
+
+/** Readings Page **/
+.readings-table .responsive-table  {
+    overflow-x: auto;
+    margin-top: 50px;
+}
+
+.readings-table .responsive-table table {
+    width: 80%;
+    color: #fff;
+    min-width: 1000px;
+    font-size: 15px;
+    border-spacing: 0px;
+    text-align: center;
+    margin: auto;
+}
+
+.readings-table .responsive-table table thead td {
+    background-color: #eee;
+    color: #000;
+    font-weight: bold;
+}
+
+.readings-table .responsive-table table td {
+    padding: 15px;
+}
+
+.readings-table .responsive-table table tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee ;
+    transition: 0.3s;
+}
+
+.readings-table .responsive-table table tbody tr td:last-child {
+    border-right: 1px solid #eee;
+}
+
+.readings-table .responsive-table table tbody tr:hover td{
+    background-color: #faf7f7;
+    color: #000;
+}
+
+.readings-table .responsive-table table span {
+    padding: 5px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.readings-table .responsive-table table .buzer {
+    background-color: rgb(255, 191, 72);
+}
+
+.readings-table .responsive-table table .no-action {
+    background-color: rgb(116, 116, 116);
+}
+
+.readings-table .responsive-table table .insu {
+    background-color: rgb(247, 114, 114);
+}
+
+.readings-table .responsive-table table .insu-buzer {
+    background-color: rgb(255, 60, 60);
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo/clogo.icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Glucose project</title>
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="img/actual-logo.png" class="logo" alt=""></a> 
+
+        <div>
+            <ul id="navbar">
+                <i id="bar-close" class="fa-solid fa-x"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="readings.html">Readings</a></li>
+                <li><a href="info.html">Info</a></li>
+		        <!-- <button>Sign in</button>
+                <a class="log" href="#">Login</a> -->
+            </ul>
+            <img id="bar" src="img/parts/btn2.png" alt="">
+        </div>
+    </section>
+
+    <div class="readings-table">
+        <h3>Readings Table</h3>
+        <div class="responsive-table">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Item no.</td>
+                        <td>Ap's Readings "mg/dl"</td>
+                        <td>LCD message</td>
+                        <td>Reading Detection Time</td>
+                        <td>Action Taken</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>50</td>
+                        <td>Range 1</td>
+                        <td>12:00PM</td>
+                        <td><span class="buzer">Buzer</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>90</td>
+                        <td>Range 2</td>
+                        <td>12:30PM</td>
+                        <td><span class="no-action">No Action</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>120</td>
+                        <td>Range 3</td>
+                        <td>01:00PM</td>
+                        <td><span class="no-action">No Action</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>160</td>
+                        <td>Range 4</td>
+                        <td>01:30PM</td>
+                        <td><span class="insu">Insulin Injection (2 ml)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>220</td>
+                        <td>Range 5</td>
+                        <td>02:00PM</td>
+                        <td><span class="insu">Insulin Injection (4 ml)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>260</td>
+                        <td>Range 6</td>
+                        <td>02:30PM</td>
+                        <td><span class="insu">Insulin Injection (6 ml)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>320</td>
+                        <td>Range 7</td>
+                        <td>03:00PM</td>
+                        <td><span class="insu">Insulin Injection (8 ml)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>360</td>
+                        <td>Range 8</td>
+                        <td>03:30PM</td>
+                        <td><span class="insu">Insulin Injection (10 ml)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>420</td>
+                        <td>Range 9</td>
+                        <td>04:00PM</td>
+                        <td><span class="insu-buzer">Insulin Injection (12 ml) & Buzer</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
